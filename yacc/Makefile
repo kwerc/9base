@@ -3,13 +3,25 @@
 
 TARG      = yacc
 
-include ../std.mk
+OFILES    ?= ${TARG}.o
+MANFILE   ?= ${TARG}.1
 
-pre-uninstall:
-	rm -f ${DESTDIR}${PREFIX}/yacc/yaccpar
-	rm -f ${DESTDIR}${PREFIX}/yacc/yaccpars
+include ../config.mk
 
-post-install:
-	@mkdir -p ${DESTDIR}${PREFIX}/yacc
-	@cp yaccpar ${DESTDIR}${PREFIX}/yacc/
-	@cp yaccpars ${DESTDIR}${PREFIX}/yacc/
+all: ${TARG}
+#	@strip ${TARG}
+	@echo built ${TARG}
+
+install: ;
+uninstall: ;
+
+.c.o:
+	@echo CC $*.c
+	@${CC} ${CFLAGS} -I../lib9 -I../lib9/sec $*.c
+
+clean:
+	rm -f ${OFILES} ${TARG}
+
+${TARG}: ${OFILES}
+	@echo LD ${TARG}
+	@${CC} ${LDFLAGS} -o ${TARG} ${OFILES} -L../lib9 -l9 -lm
