@@ -9,6 +9,7 @@ SUBDIRS  = lib9\
 	cat\
 	cleanname\
 	cmp\
+	cp\
 	date\
 	du\
 	dd\
@@ -27,6 +28,7 @@ SUBDIRS  = lib9\
 	md5sum\
 	mkdir\
 	mtime\
+	mv\
 	pbd\
 	primes\
 	pwd\

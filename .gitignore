@@ -4,6 +4,7 @@ basename/basename
 cat/cat
 cleanname/cleanname
 cmp/cmp
+cp/cp
 date/date
 dd/dd
 diff/diff
@@ -23,6 +24,7 @@ ls/ls
 md5sum/md5sum
 mkdir/mkdir
 mtime/mtime
+mv/mv
 pbd/pbd
 primes/primes
 pwd/pwd
