@@ -24,7 +24,6 @@ ls/ls
 md5sum/md5sum
 mkdir/mkdir
 mtime/mtime
-mv/mv
 pbd/pbd
 primes/primes
 pwd/pwd

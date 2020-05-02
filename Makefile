@@ -28,7 +28,6 @@ SUBDIRS  = lib9\
 	md5sum\
 	mkdir\
 	mtime\
-	mv\
 	pbd\
 	primes\
 	pwd\
